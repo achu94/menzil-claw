@@ -1,4 +1,4 @@
-/* Buttons - High-End Minimalist Astroplate Style */
+/* Buttons - Modern Clean SaaS (Stripe Style) */
 .btn {
 	display: inline-flex;
 	align-items: center;
@@ -7,76 +7,93 @@
 	font-weight: 600;
 	border-radius: 0.375rem;
 	border: 1px solid;
-	transition: all 0.2s ease;
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 	cursor: pointer;
 	text-decoration: none;
 	letter-spacing: 0.025em;
+	font-size: 0.875rem;
 }
 
 .btn-sm {
-	padding: 0.625rem 1.5rem;
-	font-size: 0.875rem;
-	border-radius: 0.375rem;
+	padding: 0.625rem 1.25rem;
+	font-size: 0.8rem;
+	border-radius: 0.25rem;
 }
 
 .btn-lg {
 	padding: 1rem 2rem;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	border-radius: 0.5rem;
 }
 
+/* Primary Button - Black Background, White Text */
 .btn-primary {
 	background-color: var(--color-primary);
 	border-color: var(--color-primary);
 	color: #FFFFFF;
-	box-shadow: var(--shadow-sm);
 }
 
 .btn-primary:hover {
-	background-color: #1A1A1A;
-	box-shadow: var(--shadow-md);
-	transform: translateY(-0.125rem);
+	background-color: #020617;
+	border-color: #020617;
+	transform: scale(1.02);
 }
 
+/* Secondary Button - White Background, Black Text */
 .btn-secondary {
 	background-color: #FFFFFF;
-	border-color: #000000;
-	color: #000000;
+	border-color: #E2E8F0;
+	color: var(--color-primary);
 }
 
 .btn-secondary:hover {
 	background-color: #F8FAFC;
-	border-color: #64748B;
-	transform: translateY(-0.125rem);
+	border-color: #CBD5E1;
+	transform: scale(1.02);
 }
 
+/* Accent Button */
 .btn-accent {
-	background-color: var(--color-accent);
-	border-color: var(--color-accent);
-	color: #000000;
+	background-color: #FFFFFF;
+	border-color: #E2E8F0;
+	color: var(--color-primary);
 }
 
+.btn-accent:hover {
+	background-color: #F8FAFC;
+	border-color: #CBD5E1;
+	transform: scale(1.02);
+}
+
+/* Black Button */
 .btn-black {
-	background-color: #000000;
-	border-color: #000000;
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
 	color: #FFFFFF;
 }
 
+.btn-black:hover {
+	background-color: #020617;
+	border-color: #020617;
+	transform: scale(1.02);
+}
+
+/* Outline Button */
 .btn-outline {
 	background-color: #FFFFFF;
-	border-color: #000000;
-	color: #000000;
+	border-color: #E2E8F0;
+	color: var(--color-primary);
 }
 
 .btn-outline:hover {
-	background-color: #000000;
-	color: #FFFFFF;
-	border-color: #000000;
+	background-color: #F8FAFC;
+	border-color: #CBD5E1;
+	transform: scale(1.02);
 }
 
 /* Focus states */
 .btn:focus-visible {
-	outline: 2px solid #000000;
+	outline: 1px solid #000000;
 	outline-offset: 2px;
 }
 
@@ -85,5 +102,12 @@
 	opacity: 0.5;
 	cursor: not-allowed;
 	transform: none !important;
-	box-shadow: none !important;
+	pointer-events: none;
+}
+
+/* Icon Button */
+.btn-icon {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
 }

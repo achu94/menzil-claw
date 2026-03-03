@@ -1,3 +1,5 @@
+/* Modern Clean SaaS Design System - Based on astroplate */
+
 /* Container */
 .container {
 	margin-left: auto;
@@ -15,8 +17,8 @@
 
 @media (min-width: 1280px) {
 	.section {
-		padding-top: 7rem;
-		padding-bottom: 7rem;
+		padding-top: 8rem;
+		padding-bottom: 8rem;
 	}
 }
 
@@ -168,6 +170,16 @@
 	padding-bottom: 4rem;
 }
 
+.py-24 {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+}
+
+.py-32 {
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+}
+
 .px-4 {
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -221,6 +233,10 @@
 	margin-bottom: 4rem;
 }
 
+.mb-24 {
+	margin-bottom: 6rem;
+}
+
 .mt-6 {
 	margin-top: 1.5rem;
 }
@@ -247,6 +263,12 @@
 	gap: 1.5rem;
 }
 
+.space-y-8 {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
 /* Borders */
 .border {
 	border: 1px solid;
@@ -256,16 +278,16 @@
 	border-bottom: 1px solid;
 }
 
-.border-2 {
-	border-width: 2px;
-}
-
-.border-gray-200 {
-	border-color: #E2E8F0;
+.border-t {
+	border-top: 1px solid;
 }
 
 .border-slate-200 {
 	border-color: #E2E8F0;
+}
+
+.border-slate-100 {
+	border-color: #F1F5F9;
 }
 
 /* Colors */
@@ -301,6 +323,10 @@
 	background-color: #F8FAFC;
 }
 
+.bg-slate-100 {
+	background-color: #F1F5F9;
+}
+
 .bg-slate-900 {
 	background-color: #0F172A;
 }
@@ -313,13 +339,12 @@
 	background-color: #F1F5F9;
 }
 
-/* Shadows */
-.shadow-sm {
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+.bg-blue-50 {
+	background-color: #F0F9FF;
 }
 
-.shadow-md {
-	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.bg-slate-50 {
+	background-color: #F8FAFC;
 }
 
 /* Display */
@@ -425,6 +450,14 @@
 	z-index: 30;
 }
 
+.z-40 {
+	z-index: 40;
+}
+
+.z-50 {
+	z-index: 50;
+}
+
 /* Display */
 .hidden {
 	display: none;
@@ -458,6 +491,9 @@
 	}
 	.md\:text-2xl {
 		font-size: 1.5rem;
+	}
+	.md\:flex-row {
+		flex-direction: row;
 	}
 }
 
