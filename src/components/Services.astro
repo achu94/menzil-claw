@@ -23,54 +23,69 @@ const services = [
 ];
 ---
 
-<section id="dienstleistungen" class="section bg-white relative py-24">
-  <div class="container">
-    <div class="text-center mb-24">
-      <div class="inline-block mb-6 px-4 py-1 border-b border-slate-200">
-        <span class="text-sm font-semibold text-slate-500 uppercase tracking-widest">
-          Unsere Dienstleistungen
-        </span>
-      </div>
-      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-slate-900 tracking-tight">
-        KFZ-Experten für Neu Wulmstorf
-      </h2>
-      <p class="text-lg text-slate-600 max-w-2xl mx-auto">
-        Professionelle KFZ-Dienstleistungen: Werkstatt, Reifen, Gutachten und mehr.
-      </p>
-    </div>
+<section id="dienstleistungen" class="section bg-white relative">
+	<div class="container">
+		<!-- Section Header -->
+		<div class="text-center mb-16">
+			<div class="inline-block mb-6">
+				<span class="text-base font-semibold text-slate-600 pb-1 border-b border-slate-200">
+					Unsere Dienstleistungen
+				</span>
+			</div>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-900 tracking-tight leading-tight">
+				KFZ-Experten für Neu Wulmstorf
+			</h2>
+			<p class="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
+				Professionelle KFZ-Dienstleistungen: Werkstatt, Reifen, Gutachten und mehr
+			</p>
+		</div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      {services.map((service, index) => (
-        <div 
-          class="group relative p-10 rounded-2xl border border-slate-100 bg-slate-50/30 hover:bg-white hover:border-slate-200 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500"
-        >
-          <div class="relative z-10">
-            <div class="inline-flex items-center justify-center w-14 h-14 mb-8 rounded-xl bg-white border border-slate-100 text-slate-900 shadow-sm group-hover:scale-110 transition-transform duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                {service.icon === "settings" && (
-                  <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" />
-                )}
-                {service.icon === "circle" && (
-                  <circle cx="12" cy="12" r="10" /><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-                )}
-                {service.icon === "file-text" && (
-                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><line x1="10" y1="9" x2="8" y2="9" />
-                )}
-                {service.icon === "shield-check" && (
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 11 11 13 15 9" />
-                )}
-              </svg>
-            </div>
-            
-            <h3 class="text-xl font-bold mb-4 text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
-              {service.title}
-            </h3>
-            <p class="text-slate-600 leading-relaxed">
-              {service.description}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
+		<!-- Services Grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			{services.map((service, index) => (
+				<div
+					class="relative p-8 rounded-xl border border-slate-200 hover:shadow-md hover:border-slate-300 transition-all duration-300 animate-fade-in-up"
+					style={`animation-delay: ${index * 0.1}s;`}
+				>
+					<!-- Content -->
+					<div class="relative z-10">
+						<!-- Icon -->
+						<div
+							class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-lg bg-slate-50 text-slate-900 text-3xl"
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+								{service.icon === "settings" && (
+									<path d="M12 2C6.477 2 2 7.523 2 12s4.477 2 10 10S17.523 2 22 12zm5-1.993l-5 5 1.414 1.414L6.707 7.293a5.004 5.004 0 0 0 7.07-7.07l5-5a5.004 5.004 0 0 0 7.07-7.07z" />
+								)}
+								{service.icon === "circle" && (
+									<circle cx="12" cy="12" r="10" />
+								)}
+								{service.icon === "file-text" && (
+									<path d="M14 2H6a2 2 0 0 1-2 2v16a2 2 0 0 1 2 2h8a2 2 0 0 1 2 2 4H6a2 2 0 0 1 2-2V6a2 2 0 0 1 2 2h6a2 2 0 0 1 2 2V4z" />
+								)}
+								{service.icon === "shield-check" && (
+									<path d="M12 2C6.477 2 2 7.523 2 12s4.477 2 10 10S17.523 2 22 12zm5-1.993l-5 5 1.414 1.414L6.707 7.293a5.004 5.004 0 0 0 7.07-7.07l5-5a5.004 5.004 0 0 0 7.07-7.07z" />
+								)}
+							</svg>
+						</div>
+
+						<!-- Title -->
+						<h3 class="text-xl font-bold mb-4 text-slate-900">
+							{service.title}
+						</h3>
+
+						<!-- Description -->
+						<p class="text-slate-600 leading-relaxed mb-6">
+							{service.description}
+						</p>
+
+						<!-- Arrow -->
+						<div class="flex items-center text-sm font-semibold text-slate-900 group-hover:translate-x-2 transition-transform duration-300">
+							Mehr erfahren →
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
 </section>
