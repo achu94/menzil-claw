@@ -1,0 +1,50 @@
+---
+import config from "@/config/config.json";
+
+interface Props {
+	title: string;
+	meta_title?: string;
+	description?: string;
+	image?: string;
+	noindex?: boolean;
+	canonical?: string;
+}
+
+const {
+	title,
+	meta_title,
+	description = config.site.name + " - " + config.site.tagline,
+	image,
+	noindex,
+	canonical,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href={config.site.favicon} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO -->
+		<title>{meta_title || title}</title>
+		<meta name="description" content={description} />
+
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+		{canonical && <link rel="canonical" href={canonical} />}
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={meta_title || title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/src/styles/main.css" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

@@ -1,0 +1,98 @@
+---
+import config from "@/config/config.json";
+---
+
+<section id="about" class="section bg-white relative overflow-hidden">
+	<!-- Background Decoration -->
+	<div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl"></div>
+	<div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
+
+	<div class="container relative z-10">
+		<!-- Section Header -->
+		<div class="text-center mb-16">
+			<div class="inline-block mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold animate-fade-in-up">
+				Über uns
+			</div>
+			<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 animate-fade-in-up">
+				Ihre KFZ-Experten in Neu Wulmstorf
+			</h2>
+			<p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
+				Bei {config.site.name} steht das Wohl und die Sicherheit Ihres
+				Fahrzeugs an erster Stelle. Wir sind Ihr zuverlässiger Partner für
+				alle KFZ-Technik und Unfallgutachten.
+			</p>
+		</div>
+
+		<!-- About Content -->
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+			<!-- Left: Mission -->
+			<div class="animate-fade-in-up" style="animation-delay: 0.3s;">
+				<div class="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-gray-50 shadow-xl border border-gray-200">
+					<div class="text-5xl mb-6">🎯</div>
+					<h3 class="text-2xl font-bold mb-4 text-gray-900">
+						Unsere Mission
+					</h3>
+					<p class="text-gray-600 leading-relaxed mb-6">
+						Kunden in KFZ-Fragen und -Schäden schnell und kompetent
+						unterstützen. Zertifizierte KFZ-Sachverständige mit persönlicher
+						Beratung und professioneller Schadensregulierung.
+					</p>
+					<div class="flex flex-wrap gap-3">
+						{["Qualität", "Vertrauen", "Schnelligkeit", "Fairness"].map((item) => (
+							<span class="px-3 py-1 rounded-full bg-white/90 text-sm font-semibold text-primary">
+								{item}
+							</span>
+						))}
+					</div>
+				</div>
+			</div>
+
+			<!-- Right: Werte -->
+			<div class="space-y-6 animate-fade-in-up" style="animation-delay: 0.4s;">
+				{[
+					{
+						title: "Zertifizierung",
+						description:
+							"Zertifizierter KFZ-Sachverständiger nach § 14 StVG und § 24 StVG.",
+						icon: "👨‍⚖️",
+					},
+					{
+						title: "Erfahrung",
+						description:
+							"Über 20 Jahre Erfahrung in der KFZ-Technik und Schadensregulierung.",
+						icon: "⚙️",
+					},
+					{
+						title: "Schnelle Abwicklung",
+						description:
+							"Professionelle Schadensabwicklung meist innerhalb von 7-14 Tagen.",
+						icon: "⚡",
+					},
+					{
+						title: "Kundenservice",
+						description:
+							"Freundlicher und persönlich Kundenservice mit direkter Ansprechperson.",
+						icon: "👨‍💻",
+					},
+				].map((item, index) => (
+					<div
+						class="group flex items-start gap-4 p-6 rounded-xl bg-white shadow-md hover:shadow-lg border border-gray-200 transition-all duration-300 hover:-translate-x-2"
+						style={`animation-delay: ${0.5 + index * 0.1}s;`}
+					>
+						<div class="text-3xl group-hover:scale-110 transition-transform duration-300">
+							{item.icon}
+						</div>
+						<div>
+							<h4 class="font-semibold mb-2 text-gray-900">
+								{item.title}
+							</h4>
+							<p class="text-sm text-gray-600">
+								{item.description}
+							</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	</div>
+</section>

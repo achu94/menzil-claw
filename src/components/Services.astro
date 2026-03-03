@@ -1,0 +1,95 @@
+---
+const services = [
+	{
+		title: "Werkstatt & Reparatur",
+		description:
+			"Professionelle Reparatur für alle KFZ-Fahrzeuge. Schnell, zuverlässig und faire Preise.",
+		icon: "🔧",
+		gradient: "from-primary to-secondary",
+	},
+	{
+		title: "Reifenwechsel & Räder",
+		description:
+			"Große Reifenauswahl für alle Fahrzeugtypen. Premium-Marken und schneller Wechsel vor Ort.",
+		icon: "🚙",
+		gradient: "from-secondary to-accent",
+	},
+	{
+		title: "Unfallgutachten & Schadensregulierung",
+		description:
+			"Zertifizierte KFZ-Gutachter nach § 14 StVG. Schnelle Abwicklung und freundlicher Kundenservice.",
+		icon: "📋",
+		gradient: "from-accent to-primary",
+	},
+	{
+		title: "KFZ-Sachverständiger & Zertifizierungen",
+		description:
+			"Betreuung aller Versicherungen. Zertifizierter Sachverständiger nach § 24 StVG mit persönlicher Beratung.",
+		icon: "👨‍⚖️",
+		gradient: "from-primary to-accent",
+	},
+];
+---
+
+<section id="dienstleistungen" class="section bg-gradient-to-b from-gray-100 to-white relative overflow-hidden">
+	<!-- Background Decoration -->
+	<div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl"></div>
+	<div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
+
+	<div class="container relative z-10">
+		<!-- Section Header -->
+		<div class="text-center mb-16">
+			<div class="inline-block mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold animate-fade-in-up">
+				Unsere Dienstleistungen
+			</div>
+			<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 animate-fade-in-up">
+				KFZ-Experten für Neu Wulmstorf
+			</h2>
+			<p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s;">
+				Professionelle KFZ-Dienstleistungen: Werkstatt, Reifen, Gutachten und mehr
+			</p>
+		</div>
+
+		<!-- Services Grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			{services.map((service, index) => (
+				<div
+					class="group relative p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl border border-gray-200 transition-all duration-500 hover:-translate-y-2 animate-fade-in-up"
+					style={`animation-delay: ${index * 0.1}s;`}
+				>
+					<!-- Gradient Border -->
+					<div
+						class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r"
+						style={`background: linear-gradient(to right, var(--color-primary), var(--color-secondary)); mask-image: linear-gradient(to bottom, black 0%, black 0%); -webkit-mask-image: linear-gradient(to bottom, black 0%, black 0%);`}
+					></div>
+
+					<!-- Content -->
+					<div class="relative z-10">
+						<!-- Icon -->
+						<div
+							class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br text-4xl shadow-lg group-hover:scale-110 transition-transform duration-300"
+							style={`background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));`}
+						>
+							{service.icon}
+						</div>
+
+						<!-- Title -->
+						<h3 class="text-xl font-bold mb-4 text-gray-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r transition-all duration-300">
+							{service.title}
+						</h3>
+
+						<!-- Description -->
+						<p class="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+							{service.description}
+						</p>
+
+						<!-- Arrow -->
+						<div class="mt-6 flex items-center text-sm font-semibold group-hover:translate-x-2 transition-transform duration-300" style={`color: var(--color-primary);`}>
+							Mehr erfahren →
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

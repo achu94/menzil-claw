@@ -1,0 +1,5 @@
+/* Main CSS - Imports all styles */
+@import "tailwindcss";
+@import "./base.css";
+@import "./components.css";
+@import "./buttons.css";

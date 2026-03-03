@@ -1,0 +1,37 @@
+{
+  "site": {
+    "name": "Menzil KFZ-Experten",
+    "tagline": "Ihr Partner für KFZ-Technik, Unfallgutachten und Reparaturen in Neu Wulmstorf",
+    "base_url": "https://menzil-kfz-experten.de",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/favicon.ico",
+    "logo": "/logo.svg",
+    "logo_text": "Menzil KFZ-Experten",
+    "logo_width": "200",
+    "logo_height": "50",
+    "logo_text_custom": "Menzil KFZ-Experten",
+    "logo_text_width": "180",
+    "logo_text_height": "40"
+  },
+  "site_image": {
+    "width": "1200",
+    "height": "630",
+    "meta_image": "images/og-image.jpg"
+  },
+  "params": {
+    "contact_form": {
+      "enable": true
+    }
+  },
+  "metadata": {
+    "meta_author": "Menzil KFZ-Experten",
+    "meta_image": "images/og-image.jpg",
+    "meta_description": "Menzil KFZ-Experten - Ihr professioneller Partner für KFZ-Technik, Unfallgutachten, Reifenwechsel und Reparaturen in Neu Wulmstorf. Zertifizierter KFZ-Sachverständiger mit 20 Jahren Erfahrung. Schnelle Schadensabwicklung und freundlicher Kundenservice."
+  },
+  "navigation_button": {
+    "enable": true,
+    "label": "Jetzt anrufen",
+    "link": "#kontakt"
+  }
+}
