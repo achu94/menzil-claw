@@ -2,22 +2,19 @@
 import config from "@/config/config.json";
 ---
 
-<header class="backdrop-blur-md bg-white/90 sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+<header class="sticky top-0 z-20 border-b border-gray-200 bg-white">
 	<nav class="container flex items-center justify-between py-4">
 		<!-- Logo -->
-		<a
-			href="/"
-			class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent transition-all duration-300 hover:scale-105"
-		>
+		<a href="/" class="text-2xl font-bold text-slate-900 transition-all duration-300">
 			⚙️ {config.site.logo_text_custom}
 		</a>
 
 		<!-- Navigation -->
-		<div class="hidden md:flex items-center gap-2">
+		<div class="hidden md:flex items-center gap-8">
 			{["Dienstleistungen", "Über uns", "Standort", "Kontakt"].map((item) => (
 				<a
-					href={`#${item.toLowerCase().replace("ü", "u").replace("ä", "a").replace("ö", "o")}`}
-					class="px-4 py-2 rounded-lg font-medium text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-gray-50 hover:text-primary transition-all duration-300 hover:scale-105"
+					href={`#${item.toLowerCase()}`}
+					class="text-base font-medium text-slate-600 hover:text-slate-900 border-b border-transparent hover:border-slate-200 transition-all duration-300 pb-1"
 				>
 					{item}
 				</a>
@@ -28,7 +25,7 @@ import config from "@/config/config.json";
 		{config.navigation_button.enable && (
 			<a
 				href={config.navigation_button.link}
-				class="px-6 py-2.5 rounded-full font-semibold bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:-translate-y-1 transition-all duration-300"
+				class="px-6 py-2.5 rounded-lg font-semibold bg-black text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
 			>
 				{config.navigation_button.label}
 			</a>

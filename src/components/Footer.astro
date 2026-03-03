@@ -2,30 +2,23 @@
 import config from "@/config/config.json";
 ---
 
-<footer class="relative overflow-hidden text-white pt-16 pb-8" style="background-color: #1F2937;">
-	<!-- Background Pattern -->
-	<div class="absolute inset-0">
-		<div class="absolute top-0 left-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl"></div>
-		<div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
-	</div>
-
-	<div class="container relative z-10">
+<footer class="relative text-white pt-16 pb-8" style="background-color: #000000;">
+	<div class="container">
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 			<!-- Company Info -->
 			<div class="animate-fade-in-up" style="animation-delay: 0.1s;">
 				<div class="mb-6">
-					<h3 class="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+					<h3 class="text-2xl font-bold text-white">
 						⚙️ {config.site.name}
 					</h3>
 				</div>
-				<p class="text-lg mb-6 text-gray-300">
+				<p class="text-lg mb-6 text-slate-300">
 					{config.site.tagline}
 				</p>
-				<p class="text-base text-gray-400 leading-relaxed">
+				<p class="text-base text-slate-400 leading-relaxed">
 					Ihr zuverlässiger Partner für KFZ-Technik und
 					Unfallgutachten in Neu Wulmstorf. Zertifizierter
-					KFZ-Sachverständiger mit persönlicher Beratung und schneller
-					Schadensregulierung.
+					KFZ-Sachverständiger nach § 14 StVG und § 24 StVG.
 				</p>
 			</div>
 
@@ -38,10 +31,10 @@ import config from "@/config/config.json";
 					{["Dienstleistungen", "Über uns", "Standort", "Kontakt"].map((item, index) => (
 						<li key={index}>
 							<a
-								href={`#${item.toLowerCase().replace("ü", "u").replace("ä", "a").replace("ö", "o")}`}
-								class="group flex items-center text-gray-300 hover:text-white transition-all duration-300 hover:-translate-x-2"
+								href={`#${item.toLowerCase()}`}
+								class="group flex items-center text-slate-300 hover:text-white transition-all duration-300"
 							>
-								<span class="transition-transform duration-300 group-hover:scale-110">
+								<span class="transition-transform duration-300 group-hover:translate-x-2">
 									→
 								</span>
 								<span class="ml-2">
@@ -60,33 +53,18 @@ import config from "@/config/config.json";
 				</h4>
 				<div class="space-y-4">
 					{[
-						{ icon: "📍", label: "Neu Wulmstorf 123, 31113 Neu Wulmstorf" },
-						{ icon: "📞", label: "030 / 987 654 321" },
-						{ icon: "✉️", label: "info@menzil-kfz-experten.de" },
+						{ icon: "📍", label: config.params.contact_info.address.street + ", " + config.params.contact_info.address.city },
+						{ icon: "📞", label: config.params.contact_info.phone.formatted },
+						{ icon: "✉️", label: config.params.contact_info.email },
 					].map((item, index) => (
-						<div
-							key={index}
-							class="group flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-blue-500/10 transition-all duration-300 hover:-translate-x-2"
-							style={`animation-delay: ${0.4 + index * 0.1}s;`}
-						>
-							<span class="text-2xl group-hover:scale-110 transition-transform duration-300">
+						<div key={index} class="group flex items-center gap-3">
+							<span class="text-2xl">
 								{item.icon}
 							</span>
-							<span class="text-gray-300 group-hover:text-white transition-colors duration-300">
+							<span class="text-slate-400 group-hover:text-white transition-colors duration-300">
 								{item.label}
 							</span>
 						</div>
-					))}
-				</div>
-				<div class="mt-8 flex gap-4">
-					{["Impressum", "Datenschutz", "AGB"].map((item, index) => (
-						<a
-							key={index}
-							href="#"
-							class="px-4 py-2 rounded-lg bg-white/5 hover:bg-blue-500 hover:text-white transition-all duration-300"
-						>
-							{item}
-						</a>
 					))}
 				</div>
 			</div>
@@ -95,15 +73,12 @@ import config from "@/config/config.json";
 		<!-- Bottom Bar -->
 		<div class="pt-8 border-t border-white/10">
 			<div class="flex flex-col md:flex-row items-center justify-between gap-4">
-				<p class="text-sm text-gray-400">
+				<p class="text-sm text-slate-400">
 					&copy; 2026 {config.site.name}. Alle Rechte vorbehalten.
 				</p>
 				<div class="flex items-center gap-4">
 					{["Zertifizierter KFZ-Sachverständiger nach § 14 StVG"].map((item, index) => (
-						<span
-							key={index}
-							class="text-sm text-gray-400 hover:text-white transition-colors duration-300 cursor-default"
-						>
+						<span key={index} class="text-sm text-slate-400 hover:text-white transition-colors duration-300 cursor-default">
 							{item}
 						</span>
 					))}
