@@ -22,12 +22,74 @@
   "params": {
     "contact_form": {
       "enable": true
+    },
+    "contact_info": {
+      "address": {
+        "street": "Neu Wulmstorf 123",
+        "city": "31113 Neu Wulmstorf",
+        "country": "Deutschland"
+      },
+      "phone": {
+        "country_code": "+49",
+        "number": "030 987 654 321",
+        "formatted": "030 / 987 654 321"
+      },
+      "email": "info@menzil-kfz-experten.de",
+      "hours": {
+        "monday_friday": {
+          "open": "07:00",
+          "close": "18:00"
+        },
+        "saturday": {
+          "open": "08:00",
+          "close": "12:00"
+        }
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/menzilkfzexperten",
+        "instagram": "https://www.instagram.com/menzilkfzexperten",
+        "linkedin": "https://www.linkedin.com/company/menzil-kfz-experten"
+      }
+    },
+    "services": {
+      "workshop": {
+        "name": "Werkstatt & Reparatur",
+        "description": "Professionelle Reparatur für alle KFZ-Fahrzeuge. Schnell, zuverlässig und faire Preise.",
+        "features": ["Ölwechsel", "Bremsenservice", "Inspektion", "Reparatur"]
+      },
+      "tires": {
+        "name": "Reifenwechsel & Räder",
+        "description": "Große Reifenauswahl für alle Fahrzeugtypen. Premium-Marken und schneller Wechsel vor Ort.",
+        "features": ["Verschiedene Marken", "Montage", "Einlagerung", "Auswuchtung"]
+      },
+      "expertise": {
+        "name": "Unfallgutachten & Schadensregulierung",
+        "description": "Zertifizierte KFZ-Gutachter nach § 14 StVG. Schnelle Abwicklung und freundlicher Kundenservice.",
+        "features": ["Kfz-Schäden", "Personenschäden", "Gutachten", "Regulierung"]
+      },
+      "advisor": {
+        "name": "KFZ-Sachverständiger & Zertifizierungen",
+        "description": "Betreuung aller Versicherungen. Zertifizierter Sachverständiger nach § 24 StVG mit persönlicher Beratung.",
+        "features": ["Versicherungen", "Gutachten", "Beratung", "Dokumente"]
+      }
+    },
+    "certifications": {
+      "kfz_sachverstaendiger": {
+        "name": "Zertifizierter KFZ-Sachverständiger",
+        "description": "Nach § 14 StVG",
+        "date": "2005"
+      },
+      "kfz_gutachter": {
+        "name": "Zertifizierter KFZ-Gutachter",
+        "description": "Nach § 24 StVG",
+        "date": "2008"
+      }
     }
   },
   "metadata": {
     "meta_author": "Menzil KFZ-Experten",
     "meta_image": "images/og-image.jpg",
-    "meta_description": "Menzil KFZ-Experten - Ihr professioneller Partner für KFZ-Technik, Unfallgutachten, Reifenwechsel und Reparaturen in Neu Wulmstorf. Zertifizierter KFZ-Sachverständiger mit 20 Jahren Erfahrung. Schnelle Schadensabwicklung und freundlicher Kundenservice."
+    "meta_description": "Menzil KFZ-Experten - Ihr professioneller Partner für KFZ-Technik, Unfallgutachten, Reifenwechsel und Reparaturen in Neu Wulmstorf. Zertifizierter KFZ-Sachverständiger nach § 14 StVG und § 24 StVG mit über 20 Jahren Erfahrung."
   },
   "navigation_button": {
     "enable": true,
